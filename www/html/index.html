@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="main3iguess" class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div id="header">
+            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/FGC_logo_%282019%29.svg" alt="FGC logo" aria-hidden="true">
+            <div class="card-header bg-primary text-white">
+              <h1 id="chat-title">FGC TravelPal</h1>
+            </div>
+          </div>
+          <div class="card-body chat-box" id="chat-box" role="log" aria-live="polite">
+            <!-- Chat messages will appear here -->
+          </div>
+          <div class="card-footer">
+            <form id="chat-form" aria-labelledby="chat-title">
+              <div class="input-group">
+                <label for="chat-input" class="sr-only">Type a message</label>
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message" required aria-required="true">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit" aria-label="Send message">
+                    <span class="material-symbols-outlined">send</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <button class="btn btn-secondary" type="button" id="voice-input-btn" aria-label="Voice input">
+            <span class="material-symbols-outlined micicon">mic</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+  <script src="voice.js"></script> 
+</body>
+</html>

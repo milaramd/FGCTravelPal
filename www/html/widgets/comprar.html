@@ -1,0 +1,162 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+
+<div class="ticket-content content-main">
+    <div class="ticket-content tkc-vert">
+        <div class="ticket-content lineblk">
+            <strong>S2</strong>
+        </div>
+        <div class="ticket-content lineblk2">
+        </div>
+        <div id="pinchos">
+            <div class="arrow-down"></div>
+            <div class="arrow-down"></div>
+            <div class="arrow-down"></div>
+            <div class="arrow-down"></div>
+            <div class="arrow-down"></div>
+        </div>
+    </div>
+    <div class="ticket-content">
+        <div class="ticket-content tkc-vert">
+            <p>Universitat Autonoma</p>
+            <p>Sant Joan</p>
+            <div style="
+                width: 100%;
+                height: 1px;
+                background-color: #1f2b2e;
+            "></div>
+            <p>1 Zona</p>
+            <p>2.25 €</p>
+            <button type="button" id="openPopupBtn" class="btn ticket-content comprar" label>Comprar</button>
+
+            <!-- Overlay para el popup -->
+            <div id="popupOverlay" class="popup-overlay"></div>
+
+            <!-- Contenido del popup -->
+            <div id="popup" class="popup">
+                <button id="closePopupBtn" class="close-btn openPopupBtn">X</button>
+                <h2>Redirigint a la passarel·la de pagament</h2>
+                <p>Si us plau, esperi...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    :root {
+        --principal: #97d700;
+    }
+
+    .ticket-content {
+        display: flex;
+        font-size: 20px !important;
+        font-family: "Inter", sans-serif !important;
+        padding: 8px;
+    }
+
+    .content-main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tkc-vert {
+        flex-direction: column;
+    }
+
+    .lineblk {
+        background-color: rgb(115, 213, 192);
+        padding: 20px;
+        border-bottom: #fff;
+        border-bottom-style: dashed;
+    }
+
+    .lineblk2 {
+        background-color: rgb(115, 213, 192);
+        height: 100%;
+    }
+
+    .comprar {
+        background-color: var(--principal);
+    }
+
+    .arrow-down {
+        width: 0px;
+        height: 0px;
+        border-left: 6.5px solid transparent;
+        border-right: 6.5px solid transparent;
+        border-top: 8px solid rgb(115, 213, 192);
+    }
+
+    #pinchos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+
+    /*popup overlay*/
+
+    .popup {
+        display: none;
+        /* Oculto por defecto */
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .popup.open {
+        display: block;
+        /* Mostrar cuando está abierto */
+    }
+
+    .popup-overlay {
+        display: none;
+        /* Oculto por defecto */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .popup-overlay.open {
+        display: block;
+        /* Mostrar cuando está abierto */
+    }
+</style>
+
+<script>
+    // Obtener los elementos
+    const openPopupBtn = document.getElementById('openPopupBtn');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('popup');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    // Función para abrir el popup
+    openPopupBtn.addEventListener('click', () => {
+        popup.classList.add('open');
+        popupOverlay.classList.add('open');
+    });
+
+    // Función para cerrar el popup
+    closePopupBtn.addEventListener('click', () => {
+        popup.classList.remove('open');
+        popupOverlay.classList.remove('open');
+    });
+
+    // Cerrar el popup  si se hace clic en el overlay
+    popupOverlay.addEventListener('click', () => {
+        popup.classList.remove('open');
+        popupOverlay.classList.remove('open');
+    });
+</script>

@@ -1,0 +1,19 @@
+api trenes tiempo real
+https://dadesobertes.fgc.cat/api/explore/v2.1/console
+
+Dialogflow
+https://cloud.google.com/dialogflow?hl=es-419
+Integración con Flutter: https://codelabs.developers.google.com/codelabs/dialogflow-flutter#0
+
+Google Directions API 
+https://developers.google.com/maps/documentation/directions/overview?hl=es-419
+Tutorial: https://www.youtube.com/watch?v=U8lgiEDmkv8
+
+
+abrir html
+python3 -m http.server 8000
+node api.js
+
+
+Deploy RAG:
+https://scalexi.medium.com/implementing-a-retrieval-augmented-generation-rag-system-with-openais-api-using-langchain-ab39b60b4d9f

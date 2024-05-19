@@ -1,0 +1,163 @@
+/*variables de colors*/
+:root {
+  --principal: #97d700;
+}
+
+
+/*estilos*/
+html {
+  height: 100% !important;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px;
+  color: #000;
+}
+
+body {
+  background-color: #f8f9fa;
+  height: 100% !important;
+}
+
+.container {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  background-color: white;
+}
+
+.message {
+  margin-bottom: 20px;
+  /* Aumentamos el margen inferior para mayor espacio */
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 80%;
+  display: block;
+  /* Forzamos que ocupe toda la línea */
+  clear: both;
+  /* Aseguramos que no se alineen uno al lado del otro */
+  animation: fadeIn 0.5s ease;
+}
+
+.message.user {
+  background-color: #97d70055;
+  /* Color verde */
+  color: #1f2b2e;
+  text-align: right;
+  margin-left: auto;
+}
+
+.message.bot {
+  background-color: #e5e5ea;
+  /* Color gris */
+  color: #1f2b2e;
+  text-align: left;
+  margin-right: auto;
+}
+
+.bg-primary {
+  background-color: #0000 !important;
+}
+
+.card-header {
+  display: inline-block;
+  width: 100% !important;
+}
+
+.btn-primary {
+  background-color: var(--principal) !important;
+  border-color: var(--principal) !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-md-6 {
+  height: 100% !important;
+  margin: 0 !important;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-5 {
+  height: 100% !important;
+  margin: 0 !important;
+  margin: 0;
+  padding: 0;
+}
+
+#main3iguess {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: var(--principal) !important;
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  height: 59.6px;
+  box-shadow: 1px 0px 0px #fff;
+  z-index: 100;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#voice-input-btn{
+  display: flex;
+  align-items: center;
+  background-color: #1f2b2e80;
+  border: #1f2b2e80;
+  width: 100%;
+  height: 40%;
+}
+
+.micicon{
+  width: 100%;
+}
+
+#status-message {
+  display: none;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: #1f2b2e88;
+}
